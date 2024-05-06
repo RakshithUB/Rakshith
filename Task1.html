@@ -77,6 +77,51 @@
         <label for="country">Select your country:</label><br>
         <input type="text" id="country" name="country"><br><br>
 
+        <label>HTML is a ________ language ?</label><br>
+        <input type="radio" id="frontend" name="answer" value="frontend">
+        <label for="frontend">Frontend</label>
+        <input type="radio" id="backend" name="answer" value="backend">
+        <label for="backend">Backend</label>
+        <input type="radio" id="database" name="answer" value="database">
+        <label for="database">Database</label>
+        <input type="radio" id="none" name="answer" value="none">
+        <label for="none">None</label><br><br>
+
+        <label>Select only fruits form below options.</label><br>
+        <input type="checkbox">
+        <label>
+            Apple
+        </label><br>
+        <input type="checkbox">
+        <label>
+            Orange
+        </label><br>
+        <input type="checkbox">
+        <label>
+            Banana
+        </label><br>
+        <input type="checkbox">
+        <label>
+            Egg
+        </label><br><br>
+
+        <label for="shortanswer">Describe yourself in just one word.</label><br>
+        <input type="text" id="shortanswer"><br><br>
+
+        <label for="longanswer">Where do you wanna see yourself in the next ten years</label><br>
+        <textarea type="text" id="longanswer" rows="4" cols="50"></textarea><br><br>
+
+        <label for="rating" style="color: white;">Rate your experience on this website:</label><br>
+        <input type="range" id="rating" name="rating" min="0" max="5"><br><br>
+
+        <label for="selectOption" style="color: white;">Are you a ________ ?</label><br>
+        <select id="selectOption" name="selectOption">
+          <option value="option1">Student</option>
+          <option value="option2">Teacher</option>
+          <option value="option3">Parent</option>
+          <!-- Add more options as needed -->
+        </select><br><br>
+
         <input type="submit"><br><br>
     </form>
 </body>
