@@ -24,3 +24,10 @@ p::first-line{
 p::first-letter{
     color: crimson;
 }
+.box{
+    background-color: rgb(145, 234, 244);
+    width: 300px;
+    border: 15px solid purple;
+    padding: 50px;
+    margin: 20px;
+}
