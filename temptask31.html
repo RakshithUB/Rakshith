@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Horizontal Navbar */
+        .horizontal-navbar {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .horizontal-navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        /* Vertical Navbar */
+        .vertical-navbar {
+            background-color: #444;
+            color: #fff;
+            width: 200px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding: 20px;
+        }
+
+        .vertical-navbar .dropdown {
+            margin-bottom: 10px;
+        }
+
+        .vertical-navbar .dropdown-toggle {
+            cursor: pointer;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .vertical-navbar .dropdown-menu {
+            display: none;
+            margin-left: 20px; /* Indent the dropdown menu */
+        }
+
+        .vertical-navbar .dropdown-menu a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .vertical-navbar .dropdown-toggle:hover + .dropdown-menu {
+            display: block;
+        }
+
+        /* Main Content */
+        .content {
+            margin-left: 250px; /* Width of vertical navbar + some margin */
+            padding: 20px;
+        }
+
+        /* Sample styling for content */
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        .overflow {
+            border: 5px solid black;
+            background-color: aqua;
+            width: 210px;
+            height: 75px;
+            margin-left: 250px;
+            overflow: scroll;
+        }
+
+        /* Inline Block Content */
+        .inline-block-content {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .inline-block-content .box {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: #333;
+            color: #fff;
+            margin-right: 10px;
+            line-height: 100px; /* Center content vertically */
+        }
+    </style>
+</head>
+<body>
+    <!-- Horizontal Navbar -->
+    <div class="horizontal-navbar">
+        <div>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <div>
+            <a href="#">Login</a>
+            <a href="#">Sign Up</a>
+        </div>
+    </div>
+
+    <!-- Vertical Navbar -->
+    <div class="vertical-navbar">
+        <div class="dropdown">
+            <a class="dropdown-toggle" href="#">Menu</a>
+            <div class="dropdown-menu">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Login</a>
+                <a href="#">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Welcome to My Website</h1>
+        <p>This is a simple webpage with a horizontal and a vertical navbar.</p>
+        <p>You can add your content here...</p>
+
+        <!-- Inline Block Content -->
+        <div class="inline-block-content">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+        </div>
+    </div>
+    <div class="overflow">
+        <p>She reached her goal, exhausted. Even more chilling to her was that the euphoria that she thought she'd feel upon reaching it wasn't there. Something wasn't right. Was this the only feeling she'd have for over five years of hard work</p>
+    </div>
+</body>
+</html>
