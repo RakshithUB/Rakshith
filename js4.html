@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>String Analyze</h1>
+    <button type="button"onclick="analyzeString()">Click to Analyze</button>
+
+    <script>
+        function analyzeString()
+        {
+            let string = "Hello this is my new JavaScript program"
+
+            let length = string.length
+            console.log(`Length of the string is ${length}`)
+
+            let lower = string.toLowerCase()
+            console.log(`The string in lower case :${lower}`)
+
+            let upper = string.toUpperCase()
+            console.log(`The string in upper case :${upper}`)
+
+            countOccurrences(string, 'a')
+
+            checkForJavaScript(string)
+        }
+
+        function countOccurrences(string, char)
+            {
+            let count = 0;
+            for (let i = 0; i < string.length; i++)
+            {
+                if (string[i] === char)
+                {
+                    count++;
+                }
+            }
+            console.log(`The count of ${char} is ${count} `)
+        }
+        function checkForJavaScript(string)
+        {
+            let regex = /javascript/i;
+            let containsJavaScript = regex.test(string);
+            console.log(`Contains 'JavaScript': ${containsJavaScript}`);
+        }
+
+    </script>
+</body>
+</html>
