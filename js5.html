@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h2>Array & its methods</h2>
+  <button type="button" onclick="myfunc()"> Click Me </button>
+  <script>
+    function myfunc(){
+        // initialize an array
+        const array_numbers = [10,5,8,3,12,6];
+        console.log("array_numbers",array_numbers);
+
+        // print the length of the array to the console
+        let number= [10,5,8,3,12,6];
+        let numberSize = number.length
+        console.log(numberSize);
+
+        //Adding the number 7 to the end of the array
+        const numbers =  [10,5,8,3,12,6];
+        numbers.push(7);
+        console.log(numbers);
+
+      // Remove the first element from the array
+        const num=  [10,5,8,3,12,6];
+        num.shift();
+        console.log(num);
+
+        //Sorting the array in ascending order
+        const numb=  [10,5,8,3,12,6];
+        numb.sort((a, b) => a - b);
+        console.log(numb);
+
+        //Reverse the array
+        const Number=  [10,5,8,3,12,6];
+        Number.reverse();
+        console.log(Number);
+
+        //print if the existing number 8 is present in array print 8 exist if not 8does not exist.
+        const array = [10,5,8,3,12,6];
+        if (array.includes(8)) {
+         console.log("8 exists")
+        }
+         else
+         {
+            console.log("8 does not exist");
+         } 
+
+         
+
+         // Find the index of the number 12
+         const arrays = [10,5,8,3,12,6];
+         const index = arrays.indexOf(12);
+
+        // Print the index to the console
+        if (index !== -1)
+         {
+           console.log("The index of 12 is: " + index)
+         } 
+         else 
+         {
+           console.log("12 is not present in the array");
+         }
+
+        // create a new array named doubledNumber by doubling each number in the numbers array
+        const doubledNumbers = [10, 5, 8, 3, 12, 6];
+        const doubled = doubledNumbers.map((num) => num * 2);
+        console.log(doubled); //Print the doubledNumbers to the console
+
+
+
+
+
+    }
+  </script>
+    
+</body>
+</html>
