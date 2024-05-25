@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 2</title>
+</head>
+<body>
+    <h2>Array & its Methods</h2>
+    <button type="button" onclick="ourfunc()">Click Me</button>
+    <script>
+        function ourfunc(){
+            // initialize an array
+            const array_names = ["John","Jane","Doe","Alice","Bob"];
+            console.log(array_names);
+
+            // Each array name on a new line
+            const array_name = ["John","Jane","Doe","Alice","Bob"];
+            array_name.slice();
+            console.log(array_name[0]);
+            console.log(array_name[1]);
+            console.log(array_name[2]);
+            console.log(array_name[3]);
+            console.log(array_name[4]);
+
+            //Add a name Eve to the end of the array
+            const names = ["John","Jane","Doe","Alice","Bob"];
+            names.push("Eve");
+            console.log(names);
+            
+            //Remove the name Doe from the array
+            let name = ["John", "Jane", "Doe", "Alice", "Bob"];
+            function removeElement() 
+            {
+               name.splice(2,1);
+               console.log(name);
+            }
+             removeElement();
+
+             //Sort the array in alphabetical order
+             const nammes = ["John","Jane","Doe","Alice","Bob"];
+             names.sort();
+             console.log(names)
+
+             // check the name Alice
+             const array = ["John","Jane","Doe","Alice","Bob"];
+        if (array.includes("Alice"))  
+         {
+            console.log("Alice is present")
+         }
+         else
+         {
+            console.log("Alice is not present");
+         } 
+
+
+
+         const arr = ["John", "Jane", "Doe", "Alice", "Bob"];
+
+// Convert names to uppercase and 
+const uppercaseNames = arr.map(name => name.toUpperCase()); //store in a new array named uppercaseNames
+console.log(uppercaseNames); //print uppercaseNames to the console
+}
+ </script>
+</body>
+</html>
