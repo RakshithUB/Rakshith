@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional & Looping Statements</title>
+</head>
+<body>
+    <h1>Conditional & Looping Statements</h1>
+    <button type="button"onclick="myFunc()">Conditional</button>
+    <button type="button"onclick="myFunc2()">Looping</button>
+
+    <script>
+        function myFunc()
+        {
+            //if
+            let num = 10;
+            if(num > 0)
+            {
+                console.log("Num is not a Zero")
+            }
+            
+            //if
+            let num2 = 0;
+            if(num2 > 0)
+            {
+                console.log("Num is not a Zero")
+            }
+            else
+            {
+                console.log("Num is a Zero")
+            }
+
+            //else if
+            let num3 = -5
+            if(num3 > 0)
+            {
+                console.log("Number is Positive")
+            }
+            else if(num3 == 0)
+            {
+                console.log("Number is Zero")
+            }
+            else
+            {
+                console.log("Number is Negative")
+            }
+
+            // Switch
+            let day = "Wed"
+            switch(day)
+            {
+                case "Monday" :
+                    console.log("Today is Monday")
+                    break
+                case "Tuesday" :
+                    console.log("Today is Tuesday")
+                    break
+                default:
+                    console.log("Today is neither Monday nor Tuesday")
+            }
+        }
+        function myFunc2()
+        {
+            // For Loop
+            for(let i = 0;i<5;i++)
+            {
+                console.log(i)
+            }
+
+            // For/ in
+            const details = {company_name: "Ultimez", course: "JS"}
+            for(const key in details)
+            {
+                console.log(key + ": "+details[key])
+            }
+
+            // For/ of
+            const colors = ["Red","Green","Blue"]
+            for(const eachColor of colors)
+            {
+                console.log(eachColor)
+            }
+
+            // While Loop
+            let count = 0;
+            while (count < 3)
+            {
+             console.log(count)
+             count++   
+            }
+
+            //Do While Loop
+            let num4 = 0
+            do
+            {
+                console.log(num4)
+                num4++
+            }
+            while (num4 < 3)
+        }
+    </script>
+</body>
+</html>
