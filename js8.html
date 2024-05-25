@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dates & Regex</title>
+</head>
+<body>
+    <h1>Dates and Regex</h1>
+    <button type="button" onclick="myFunc()">Dates</button>
+    <button type="button" onclick="myFunc2()">Regex</button>
+
+    <script>
+        function myFunc() {
+            // Creating Dates
+            const currentDate = new Date();
+            console.log(currentDate);
+
+            // Specific Date
+            const specificDate = new Date('2024-01-01');
+            console.log(specificDate);
+
+            // Using Milliseconds
+            const miliSec = new Date(530069453690053);
+            console.log(miliSec);
+
+            // Access Date Components
+            const date = new Date();
+            const year = date.getFullYear();
+            const month = date.getMonth(); // Note: Month is zero-indexed (0-11)
+            const day = date.getDate();
+            const minutes = date.getMinutes();
+            const seconds = date.getSeconds();
+
+            // Displaying above terms
+            console.log(date);
+            console.log(year);
+            console.log(month + 1); // Adding 1 to display the correct month number
+            console.log(day);
+            console.log(minutes);
+            console.log(seconds);
+
+            // Formatted Date
+            const formattedDate = date.toLocaleDateString('en-US');
+            console.log(formattedDate);
+
+            // Manipulate Dates
+            date.setDate(date.getDate() + 7);
+            console.log("Date after adding 7 days:", date);
+
+            // Compare Dates
+            const date1 = new Date('2024-01-01');
+            const date2 = new Date('2024-01-31');
+            if (date1 < date2) {
+                console.log("Date1 is earlier than Date2");
+            }
+        }
+
+        function myFunc2() {
+            let pattern1 = /dog/;
+            let string1 = "I have a dog and a cat";
+            console.log(pattern1.test(string1));
+
+            let pattern2 = /\b[cC]\w+/g;
+            let string2 = "Cat and cow are two different animals";
+            console.log(string2.match(pattern2));
+
+            let pattern3 = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+            email = "brakshith999@gmail.com"
+            console.log(pattern3.test(email))
+        }
+    </script>
+</body>
+</html>
