@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person, Set, and Map Operations</title>
+</head>
+<body>
+    <h1>Person, Set, and Map Operations</h1>
+    <button type="button" onclick="displayPersons()">Objects Here</button>
+    <button type="button" onclick="performSetOperations()">Sets Here</button>
+    <button type="button" onclick="performMapOperations()">Maps Here</button>
+
+    <script>
+        // Define the Person constructor function
+        function Person(name, age, gender, occupation) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.occupation = occupation;
+        }
+
+        // Create two instances of the Person object
+        let person1 = new Person("Alice", 30, "Female", "Engineer");
+        let person2 = new Person("Bob", 25, "Male", "Designer");
+
+        // Function to display details of each person
+        function displayPersons() {
+            console.log("Details of person 1:");
+            console.log("Name:", person1.name);
+            console.log("Age:", person1.age);
+            console.log("Gender:", person1.gender);
+            console.log("Occupation:", person1.occupation);
+
+            console.log("Details of person 2:");
+            console.log("Name:", person2.name);
+            console.log("Age:", person2.age);
+            console.log("Gender:", person2.gender);
+            console.log("Occupation:", person2.occupation);
+        }
+
+        // Function to create a set of unique numbers from an array
+        function uniqueNumbers(array) {
+            return new Set(array);
+        }
+
+        // Function to perform union of two sets
+        function union(setA, setB) {
+            return new Set([...setA, ...setB]);
+        }
+
+        // Function to perform intersection of two sets
+        function intersection(setA, setB) {
+            return new Set([...setA].filter(x => setB.has(x)));
+        }
+
+        // Function to perform difference of two sets
+        function difference(setA, setB) {
+            return new Set([...setA].filter(x => !setB.has(x)));
+        }
+
+        // Function to check if one set is a subset of another
+        function isSubset(setA, setB) {
+            for (let elem of setA) {
+                if (!setB.has(elem)) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        // Function to perform set operations and log results
+        function performSetOperations() {
+            const array1 = [1, 2, 3, 4, 5, 1, 2];
+            const array2 = [4, 5, 6, 7, 8];
+            
+            console.log("Initial array1:", array1);
+            console.log("Initial array2:", array2);
+
+            const set1 = uniqueNumbers(array1);
+            const set2 = uniqueNumbers(array2);
+
+            console.log("Unique numbers in array1:", set1);
+            console.log("Unique numbers in array2:", set2);
+
+            const unionSet = union(set1, set2);
+            console.log("Union of set1 and set2:", unionSet);
+
+            const intersectionSet = intersection(set1, set2);
+            console.log("Intersection of set1 and set2:", intersectionSet);
+
+            const differenceSet = difference(set1, set2);
+            console.log("Difference of set1 and set2 (set1 - set2):", differenceSet);
+
+            const isSet1SubsetOfSet2 = isSubset(set1, set2);
+            console.log("Is set1 a subset of set2?", isSet1SubsetOfSet2);
+
+            const isSet2SubsetOfSet1 = isSubset(set2, set1);
+            console.log("Is set2 a subset of set1?", isSet2SubsetOfSet1);
+        }
+
+        // Function to perform map operations and log results
+        function performMapOperations() {
+            // Create a map and add some key-value pairs
+            let map = new Map();
+            map.set('name', 'Alice');
+            map.set('age', 30);
+            map.set('gender', 'Female');
+            map.set('occupation', 'Engineer');
+
+            console.log("Initial map:", map);
+
+            // Accessing values
+            console.log("Name:", map.get('name'));
+            console.log("Age:", map.get('age'));
+            console.log("Gender:", map.get('gender'));
+            console.log("Occupation:", map.get('occupation'));
+
+            // Updating values
+            map.set('age', 31);
+            console.log("Updated age:", map.get('age'));
+
+            // Display the complete updated map
+            console.log("Updated map:", map);
+
+            // Deleting values
+            map.delete('occupation');
+            console.log("Map after deleting 'occupation':", map);
+
+            // Checking if a key exists
+            console.log("Map has 'name':", map.has('name'));
+            console.log("Map has 'occupation':", map.has('occupation'));
+        }
+    </script>
+</body>
+</html>
