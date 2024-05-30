@@ -1,0 +1,48 @@
+body {
+    padding-top: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+#pollsContainer .poll {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#pollsContainer .poll h3 {
+    margin-top: 0;
+}
+
+#pollsContainer .poll .options button {
+    margin-right: 10px;
+}
+
+#pollsContainer .poll .results {
+    margin-top: 10px;
+}
+
+#pollsContainer .poll .results span {
+    display: block;
+    margin-top: 5px;
+}
+
+#pollsContainer .poll .results .highlight {
+    font-weight: bold;
+    color: #fff;
+    background-color: #28a745;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#pollsContainer .poll .delete-btn {
+    margin-top: 10px;
+    display: inline-block;
+}
+.highlight {
+    font-weight: bold;
+    color: red;
+}
